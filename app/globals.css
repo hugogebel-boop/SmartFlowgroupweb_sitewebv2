@@ -1,0 +1,36 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sf-accent: #8a2eff;
+  --sf-cyan: #00d3ff;
+  --sf-bg: #f8f9fb;
+  --sf-text: #1c1c1e;
+  --sf-muted: #9ca3af;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--sf-bg);
+  color: var(--sf-text);
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+.font-display {
+  font-family: var(--font-display), 'Segoe UI', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
