@@ -232,7 +232,13 @@ export function Hero() {
         <div className="pointer-events-none fixed inset-x-0 top-3 z-50 flex justify-center px-4 sm:px-8 lg:px-12">
           <nav className="pointer-events-auto flex w-full max-w-5xl items-center justify-between rounded-full border border-white/45 bg-white/65 px-5 py-2.5 text-sm text-sf-text shadow-[0_18px_60px_rgba(45,76,170,0.18)] backdrop-blur-xl">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo/SmartFlow.png" alt="Smartflow" width={40} height={40} priority />
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo/SmartFlow.png`}
+                alt="Smartflow"
+                width={40}
+                height={40}
+                priority
+              />
               <span className="font-display text-xs font-semibold uppercase tracking-[0.36em] text-sf-text/70 sm:text-sm">
                 Smartflow
               </span>
